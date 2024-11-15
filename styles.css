@@ -1,0 +1,184 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: url('images/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura */
+}
+
+/* Header */
+header {
+    background: rgba(76, 175, 80, 0.8);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Asegura que la imagen y el texto estén centrados en móvil */
+}
+
+.profile-photo {
+    width: 150px;
+    height: 250px;
+    border-radius: 10%;
+    border: 2px solid #050123;
+    margin-bottom: 10px;
+}
+
+.header-text h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #000;
+    text-shadow: 
+    0.1px 0.1px 0 #5b5101, /* Sombra a la derecha y abajo (borde rojo) */
+    -0.1px -0.1px 0 #5b5101, /* Sombra a la izquierda y arriba (borde rojo) */
+    0.1px -0.1px 0 #5b5101,  /* Sombra a la derecha y arriba (borde rojo) */
+    -0.1px 0.1px 0 #5b5101;
+}
+
+.header-text p {
+    font-size: 1rem;
+    margin: 0;
+    color: #050123;
+}
+
+/* Navegación */
+nav {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+nav button {
+    background: #000a00;
+    color: #e3f51d;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+nav button:hover {
+    background: #45a049;
+}
+
+/* Principal contenedor */
+main {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin-bottom: 80px; /* Espacio suficiente para el footer */
+    flex-grow: 1; /* Hace que el contenido ocupe todo el espacio disponible */
+}
+
+/* Sección "Sobre mí" (quien soy) */
+#quien-soy {
+    display: flex;
+    flex-direction: column; /* Centrado en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center;
+    padding: 2rem;
+}
+
+.about-me-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Contenedor del video */
+.video-container {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;     /* Centra el contenido verticalmente */
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.video-titulo {
+    font-size: 1.25rem;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Estilos para la sección de Estudios y Experiencias */
+#estudios-experiencias {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#estudios-experiencias h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.experiencias-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Estilos para el Footer */
+footer {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-icons {
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    color: yellowgreen;
+}
+
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

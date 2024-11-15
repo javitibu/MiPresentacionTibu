@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Contenido principal que aparece al cargar la página -->
+    <div id="main-content" class="main-content">
+        <header aria-label="Encabezado de la página">
+            <div class="header-content">
+                <img src="images/perfil.jpg" alt="Foto Javier A Buron" class="profile-photo">
+                <div class="header-text">
+                    <h1>HOLA, SOY JAVIER ALEJANDRO BURÓN</h1>
+                    <hr>
+                    <p>Es un gusto que me visites y bienvenido a mi página Web de presentación.</p>
+                </div>
+            </div>
+        </header>
+
+        <nav aria-label="Navegación principal">
+            <button onclick="showSection('quien-soy')">¿Quién Soy?</button>
+            <button onclick="showSection('estudios-experiencias')">Estudios y Experiencias</button>
+            <button onclick="showSection('contacto')">Contacto</button>
+        </nav>
+
+        <main>
+            <!-- Sección de "Sobre mí" -->
+            <section id="quien-soy" class="content-section">
+                <div class="about-me-text">
+                    <h2>Sobre Mí</h2>
+                    <p>Hola, soy Técnico Superior Electrónico en Computadoras. Me dedico a varias áreas de la informática, pero me destaco en el área de diseño web. Soy una persona RESPONSABLE, COMPROMETIDA y MUY CREATIVA.</p>
+                    <p>Mi compromiso con la informática es íntegro. Creo que con la tecnología digital allanamos el camino hacia el futuro, y la necesidad de destacarse visualmente es más importante que nunca. Me enorgullezco de ser un programador creativo e innovador, y siempre me involucro en proyectos con diferentes clientes.</p>
+                </div>
+
+                <!-- Contenedor de video con título -->
+                <div class="video-container">
+                    <h2 class="about-me-text">Video filmado por mí de muestra</h2>
+                    <iframe src="https://www.youtube.com/embed/Xm_mDCMV4IM" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- Sección de "Estudios y Experiencias" -->
+            <section id="estudios-experiencias" class="content-section" style="display: none;">
+                <h2>Estudios y Experiencias</h2>
+                <div class="experiencias-container">
+                    <ul>
+                        <li><strong>Tester de Software Profesional</strong></li>
+                        <li><strong>Egresado en el curso Full Stack Python</strong></li>
+                        <li><strong>Introducción a Gestión de Redes - Edición 1 en LACNIC</strong></li>
+                        <li><strong>Seguridad Informática para Operadores Nivel 1</strong></li>
+                        <li><strong>Curso desarrollo de Apps Móviles (Google Actívate)</strong></li>
+                        <li><strong>Técnico Electrónico Superior Especializado en Computadoras</strong></li>
+                        <li><strong>Full Stack Node.js</strong></li>
+                        <li><strong>Agile Scrum</strong></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Sección de "Contacto" -->
+            <section id="contacto" class="content-section" style="display: none;">
+                <h2>Contacto</h2>
+                <p>Si quieres ponerte en contacto conmigo, puedes enviarme un correo a <a
+                        href="mailto:javitibu04@gmail.com">javitibu04@gmail.com</a>.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 @DIS.TIBU Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/javitibu" target="_blank" aria-label="Facebook"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/javier-alejandro-buron-0732141b2" target="_blank"
+                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer> 
+
+    <script src="script.js"></script>
+</body>
+
+</html>
