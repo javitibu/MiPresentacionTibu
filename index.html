@@ -65,11 +65,39 @@
             </section>
 
             <!-- Sección de "Contacto" -->
-            <section id="contacto" class="content-section" style="display: none;">
-                <h2>Contacto</h2>
-                <p>Si quieres ponerte en contacto conmigo, puedes enviarme un correo a <a
-                        href="mailto:javitibu04@gmail.com">javitibu04@gmail.com</a>.</p>
-            </section>
+    <section id="contacto" class="content-section" style="display: none;">
+        <h2>Contacto</h2>
+        <p>Si quieres ponerte en contacto conmigo, puedes enviarme un correo a <a href="mailto:javitibu04@gmail.com">javitibu04@gmail.com</a>.</p>
+
+    <!-- Formulario de contacto -->
+    <form id="contact-form" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="nombre-apellido">Nombre y Apellido:</label>
+            <input type="text" id="nombre-apellido" name="nombre-apellido" required>
+        </div>
+
+        <div class="form-group">
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telefono">Número de Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+        </div>
+
+        <div class="form-group">
+            <label for="motivo">Motivo:</label>
+            <textarea id="motivo" name="motivo" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="thank-you-message" style="display:none; color: green;">¡Muchas gracias! Te responderé lo antes posible.</p>
+    <p id="error-message" style="display:none; color: red;">Por favor, completa todos los campos obligatorios.</p>
+</section>
+
         </main>
     </div>
 

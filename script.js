@@ -24,3 +24,29 @@ function showSection(sectionId) {
     }
 }
 
+// Función de validación para el formulario de contacto
+function validateForm() {
+    // Obtener los valores de los campos del formulario
+    const nombreApellido = document.getElementById('nombre-apellido').value;
+    const correo = document.getElementById('correo').value;
+    const motivo = document.getElementById('motivo').value;
+
+    // Verificar si los campos obligatorios están vacíos
+    if (!nombreApellido || !correo || !motivo) {
+        // Mostrar el mensaje de error
+        document.getElementById('error-message').style.display = 'block';
+        return false; // No se envía el formulario
+    }
+
+    // Si todos los campos obligatorios están completos, ocultar el mensaje de error
+    document.getElementById('error-message').style.display = 'none';
+
+    // Mostrar el mensaje de agradecimiento
+    document.getElementById('thank-you-message').style.display = 'block';
+
+    // Limpiar el formulario
+    document.getElementById('contact-form').reset();
+
+    // Evitar que el formulario se recargue
+    return false;
+}

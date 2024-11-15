@@ -182,3 +182,63 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Estilos para el formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho total */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+    box-sizing: border-box; /* Asegura que el padding y el borde estén dentro del ancho total */
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar solo en dirección vertical */
+    max-height: 300px; /* Limita la altura máxima */
+    overflow-y: auto; /* Muestra un scroll si el contenido excede el tamaño */
+}
+
+button {
+    background-color: #45a049;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+/* Mensajes de éxito y error */
+#thank-you-message, #error-message {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
