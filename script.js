@@ -1,52 +1,99 @@
-// Esta parte de js es para mostrar u ocultar secciones de contenido
-function showSection(sectionId) {
-    // Primero oculto todas las secciones
+// Función para mostrar u ocultar secciones de contenido
+function showSection(event, sectionId) {
+    event.preventDefault(); // Previene el comportamiento predeterminado del enlace
+
+    // Ocultar todas las secciones
     const sections = document.querySelectorAll('.content-section');
     sections.forEach(section => {
         section.style.display = 'none';
     });
 
-    // para mostrar la sección seleccionada
+    // Mostrar la sección seleccionada
     const sectionToShow = document.getElementById(sectionId);
-    sectionToShow.style.display = 'block';
-
-    // Forzar el reajuste de la posición del video en la sección "¿Quién Soy?" que nose que le pasa
-    if (sectionId === 'quien-soy') {
-        const videoContainer = document.querySelector('.video-container');
-        
-        // Resetea el margen y los estilos de visualización
-        videoContainer.style.marginTop = '1.5rem'; // Reaplica el margen superior
-
-        // para que el video esté centrado, sin importar lo que se haga previamente
-        videoContainer.style.display = 'none'; // Oculto el contenedor
-        videoContainer.offsetHeight; // fuerzo el redibujado (reflow)
-        videoContainer.style.display = 'flex'; // para mostrar de nuevo con el estilo correctamente aplicado
+    if (sectionToShow) {
+        sectionToShow.style.display = 'block';
     }
 }
 
 // Función de validación para el formulario de contacto
 function validateForm() {
-    // Obtener los valores de los campos del formulario
     const nombreApellido = document.getElementById('nombre-apellido').value;
     const correo = document.getElementById('correo').value;
     const motivo = document.getElementById('motivo').value;
 
-    // Verificar si los campos obligatorios están vacíos
     if (!nombreApellido || !correo || !motivo) {
-        // Mostrar el mensaje de error
         document.getElementById('error-message').style.display = 'block';
-        return false; // No se envía el formulario
+        return false;
     }
 
-    // Si todos los campos obligatorios están completos, ocultar el mensaje de error
     document.getElementById('error-message').style.display = 'none';
-
-    // Mostrar el mensaje de agradecimiento
     document.getElementById('thank-you-message').style.display = 'block';
-
-    // Limpiar el formulario
     document.getElementById('contact-form').reset();
-
-    // Evitar que el formulario se recargue
     return false;
 }
+// Función para consumir la API y mostrar los productos
+const apiUrl = 'https://miapi.com/obtener-productos';
+
+// Lista de experiencias predefinidas
+const experienciasPredefinidas = [
+    "CSS",
+    "JavaScript",
+    "Python",
+    "React",
+    "Node.js",
+    "Desarrollo Web",
+    "Bases de Datos"
+];
+
+// Función para cargar las experiencias predefinidas en el select
+function cargarExperiencias() {
+    const select = document.getElementById('intereses-predefinidos');
+    
+    // Limpiamos el select antes de agregar nuevas opciones
+    select.innerHTML = '';
+
+    // Creamos la opción por defecto
+    const opcionDefault = document.createElement('option');
+    opcionDefault.value = '';
+    opcionDefault.textContent = '-- Selecciona una opción --';
+    select.appendChild(opcionDefault);
+
+    // Agregamos las opciones predefinidas
+    experienciasPredefinidas.forEach(experiencia => {
+        const opcion = document.createElement('option');
+        opcion.value = experiencia;
+        opcion.textContent = experiencia;
+        select.appendChild(opcion);
+    });
+}
+
+// Función para enviar la selección de intereses
+function enviarIntereses() {
+    const experienciaSeleccionada = document.getElementById('intereses-predefinidos').value;
+    const experienciaPersonalizada = document.getElementById('experiencia-personalizada').value;
+
+    // Comprobamos qué opción se ha seleccionado o escrito
+    let mensaje = "Experiencias seleccionadas:\n";
+
+    if (experienciaSeleccionada) {
+        mensaje += `- Predefinida: ${experienciaSeleccionada}\n`;
+    }
+
+    if (experienciaPersonalizada) {
+        mensaje += `- Personalizada: ${experienciaPersonalizada}\n`;
+    }
+
+    if (!experienciaSeleccionada && !experienciaPersonalizada) {
+        mensaje = "No se ha seleccionado ninguna experiencia.";
+    }
+
+    // Mostrar la información en consola o procesarla según sea necesario
+    console.log(mensaje);
+
+    // Limpiar el formulario después de enviar
+    document.getElementById('experiencia-personalizada').value = '';
+    document.getElementById('intereses-predefinidos').value = '';
+}
+
+// Cargar las experiencias predefinidas cuando se cargue la página
+document.addEventListener("DOMContentLoaded", cargarExperiencias);
