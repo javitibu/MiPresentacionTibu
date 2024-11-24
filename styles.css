@@ -75,7 +75,7 @@ nav button:hover {
     background: #45a049;
 }
 
-/* Principal contenedor */
+/* Contenedor Principal */
 main {
     padding: 1rem;
     background: rgba(255, 255, 255, 0.8);
@@ -100,7 +100,7 @@ main {
     border-radius: 8px;
     text-align: center;
     margin: 1rem auto;
-    max-width: 800px; /* Mantén el contenido centrado y dentro del cuadro */
+    max-width: 800px; /* Mantiebne el contenido centrado y dentro del cuadro */
 }
 
 .about-me-text {

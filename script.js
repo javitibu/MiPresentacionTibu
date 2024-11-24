@@ -1,6 +1,6 @@
 // Función para mostrar u ocultar secciones de contenido
 function showSection(event, sectionId) {
-    event.preventDefault(); // Previene el comportamiento predeterminado del enlace
+    event.preventDefault(); // esto evita el comportamiento predeterminado del enlace
 
     // Ocultar todas las secciones
     const sections = document.querySelectorAll('.content-section');
@@ -49,16 +49,16 @@ const experienciasPredefinidas = [
 function cargarExperiencias() {
     const select = document.getElementById('intereses-predefinidos');
     
-    // Limpiamos el select antes de agregar nuevas opciones
+    // Limpio el select antes de agregar nuevas opciones
     select.innerHTML = '';
 
-    // Creamos la opción por defecto
+    // Creo la opción por defecto
     const opcionDefault = document.createElement('option');
     opcionDefault.value = '';
     opcionDefault.textContent = '-- Selecciona una opción --';
     select.appendChild(opcionDefault);
 
-    // Agregamos las opciones predefinidas
+    // Agrego las opciones predefinidas
     experienciasPredefinidas.forEach(experiencia => {
         const opcion = document.createElement('option');
         opcion.value = experiencia;
@@ -72,7 +72,7 @@ function enviarIntereses() {
     const experienciaSeleccionada = document.getElementById('intereses-predefinidos').value;
     const experienciaPersonalizada = document.getElementById('experiencia-personalizada').value;
 
-    // Comprobamos qué opción se ha seleccionado o escrito
+    // Compruevo qué opción se ha seleccionado o escrito
     let mensaje = "Experiencias seleccionadas:\n";
 
     if (experienciaSeleccionada) {
@@ -87,7 +87,7 @@ function enviarIntereses() {
         mensaje = "No se ha seleccionado ninguna experiencia.";
     }
 
-    // Mostrar la información en consola o procesarla según sea necesario
+    // Mostrar la información en consola o procesarla, ver esta parte
     console.log(mensaje);
 
     // Limpiar el formulario después de enviar
