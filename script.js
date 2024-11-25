@@ -97,3 +97,15 @@ function enviarIntereses() {
 
 // Cargar las experiencias predefinidas cuando se cargue la página
 document.addEventListener("DOMContentLoaded", cargarExperiencias);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navbarCollapse = document.getElementById("navbarNav"); // El contenedor colapsable
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link"); // Todos los enlaces del menú
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+            bsCollapse.hide(); // Cierra el menú
+        });
+    });
+});
