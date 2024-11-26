@@ -72,7 +72,7 @@ function enviarIntereses() {
     const experienciaSeleccionada = document.getElementById('intereses-predefinidos').value;
     const experienciaPersonalizada = document.getElementById('experiencia-personalizada').value;
 
-    // Compruevo qué opción se ha seleccionado o escrito
+    // Construyo el mensaje para la consola
     let mensaje = "Experiencias seleccionadas:\n";
 
     if (experienciaSeleccionada) {
@@ -87,13 +87,27 @@ function enviarIntereses() {
         mensaje = "No se ha seleccionado ninguna experiencia.";
     }
 
-    // Mostrar la información en consola o procesarla, ver esta parte
     console.log(mensaje);
+
+    // Mostrar la ventana emergente de agradecimiento
+    showThankYouOverlayInterests();
 
     // Limpiar el formulario después de enviar
     document.getElementById('experiencia-personalizada').value = '';
     document.getElementById('intereses-predefinidos').value = '';
 }
+
+// Función para mostrar la ventana emergente en la selección de intereses
+function showThankYouOverlayInterests() {
+    const overlay = document.getElementById('thank-you-overlay-interests');
+    overlay.style.display = 'flex'; // Muestra la ventana emergente con el mensaje
+
+    // Ocultar la ventana después de 1 segundos (1000 ms)
+    setTimeout(() => {
+        overlay.style.display = 'none';
+    }, 1000);
+}
+
 
 // Cargar las experiencias predefinidas cuando se cargue la página
 document.addEventListener("DOMContentLoaded", cargarExperiencias);

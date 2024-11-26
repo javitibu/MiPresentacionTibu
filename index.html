@@ -85,7 +85,7 @@
 
         <!-- Sección "Contacto" -->
         <section id="contacto" class="content-section" style="display: none;">
-            <h2>Contacto</h2>
+            <h2 class="titulo_contacto">RELLENA EL FORMULARIO Y ME PONDRE EN CONTACTO A LA BREVEDAD</h2>
             <form id="contact-form" onsubmit="return validateForm()">
                 <div class="form-group">
                     <label for="nombre-apellido">Nombre y Apellido:</label>
@@ -129,6 +129,12 @@
     </div>
 
     <button id="enviar-intereses" class="btn btn-primary" onclick="enviarIntereses()">Enviar Selección</button>
+    <!-- Ventana emergente de agradecimiento para Selección de Intereses -->
+    <div id="thank-you-overlay-interests" class="overlay">
+        <div class="thank-you-box">
+        <p>¡MUCHAS GRACIAS!</p>
+        </div>
+    </div>
 </section>
 
      </div>
