@@ -75,8 +75,43 @@ nav button {
     font-size: 1rem;
 }
 
-nav button:hover {
-    background: #45a049;
+/* Estilo para los elementos de la lista */
+.nav-item {
+    list-style: none; /* Sin viñetas */
+    display: inline-block; /* Los elementos estarán en línea */
+    margin: 0 10px; /* Espaciado entre elementos */
+}
+
+/* Estilo base para los enlaces */
+.nav-link {
+    text-decoration: none; /* Sin subrayado */
+    color: #12fa12; /* Color azul moderno */
+    font-size: 16px; /* Tamaño de fuente legible */
+    padding: 8px 12px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Animación suave para efectos */
+}
+
+/* Efecto al pasar el ratón */
+.nav-link:hover {
+    background-color: #000203; /* Fondo azul */
+    color: #f7e70b; /* Texto blanco */
+}
+
+.navbar-brand {
+    text-decoration: none; /* Sin subrayado */
+    color: #c6d3e0; /* Azul moderno para destacar */
+    font-size: 20px; /* Tamaño más grande para resaltar */
+    font-weight: bold; /* Texto en negrita */
+    font-family: 'Arial', sans-serif; /* Fuente clara y profesional */
+    margin-right: 20px; /* Espaciado a la derecha del resto de elementos */
+    transition: color 0.3s ease; /* Efecto suave para el color */
+}
+
+/* Efecto al pasar el ratón */
+.navbar-brand:hover {
+    color: #787c81; /* Azul más oscuro al resaltar */
+    text-decoration: none;
 }
 
 /* Contenedor Principal */

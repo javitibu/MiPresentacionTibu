@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Listado de Postulantes</title>
+</head>
+
+<body>
+    <h1>Listado de Postulantes</h1>
+    <br>
+    <br>
+    <div class="logo_corpo">
+        <a href="../index.html">
+            <img src="../images/listado.png">   
+        </a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Apellido</th>
+                <th>Nombre</th>                
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>Comentario</th>
+                <th>Edad</th>
+                <th>CV</th>
+            </tr>
+        </thead>
+        <tbody id="tablaProductos"> </tbody>
+    </table>
+    <br>
+    <div class="contenedor-centrado">
+        <a href="index_post.html">Menu principal</a>
+    </div>
+
+    <script>    
+        //const URL = "http://127.0.0.1:5000/"
+        //const URL = "https://github.com/javitibu/MiPresentacionTibu.git"
+        const URL="http://127.0.0.1:5000/"
+        // Realizamos la solicitud GET al servidor para obtener todos los productos
+        fetch(URL + 'productos')
+            .then(function (response) {
+                if (response.ok) {return response.json(); }
+            })
+            .then(function (data) {
+                let tablaProductos = document.getElementById('tablaProductos');
+
+                // Iteramos sobre los postulantes y agregamos filas a la tabla
+                for (let producto of data) {
+                    let fila = document.createElement('tr');
+                    fila.innerHTML = '<td>' + producto.codigo + '</td>' +
+                        '<td>' + producto.apellido + '</td>' +
+                        '<td align="right">' + producto.nombre + '</td>' +
+                        '<td align="right">' + producto.correo + '</td>' +
+                        '<td align="right">' + producto.telefono + '</td>' +
+                        '<td align="right">' + producto.comentario + '</td>' +
+                        '<td align="right">' + producto.edad + '</td>' +
+                        '<td align="right">' + producto.cv + '</td>';
+                    tablaProductos.appendChild(fila);
+                }
+            })
+            .catch(function (error) {
+                // Código para manejar errores
+                alert('Error al obtener los Postulante.');
+            });
+    </script>
+</body>
+</html>
