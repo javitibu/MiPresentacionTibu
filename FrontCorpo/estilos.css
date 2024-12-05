@@ -1,0 +1,162 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merienda', cursive;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: url('../images/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-height: 100vh; /* Altura mínima de toda la pantalla */
+    padding-bottom: 110px;
+    text-align: center; /* Centra el contenido en la página */
+}
+
+/* Título principal */
+h1 {
+    font-size: 2.5rem;
+    color: #FFD700; /* Amarillo dorado */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+/* Contenedor principal */
+.contenedor {
+    background: rgba(0, 0, 0, 0.8); /* Negro medio transparente */
+    border-radius: 10px;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    text-align: center;
+}
+
+/* Enlaces o botones */
+.enlaces {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.enlaces a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #FFD700; /* Amarillo */
+    background-color: #333; /* Gris oscuro */
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.enlaces a:hover {
+    background-color: #FFD700; /* Fondo amarillo */
+    color: #000; /* Texto negro */
+    transform: scale(1.05); /* Ligeramente más grande */
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+/* Footer */
+footer {
+    background: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    color: yellowgreen;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .contenedor {
+        width: 90%;
+    }
+
+    .enlaces a {
+        font-size: 1rem;
+        padding: 10px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .contenedor {
+        width: 95%;
+    }
+
+    .enlaces a {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+}
+/* Logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.logo img {
+    max-width: 150px; /* Tamaño máximo en ancho */
+    height: auto; /* Mantiene la proporción */
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)); /* Sombra más visible */
+    transition: transform 0.3s ease; /* Animación al pasar el mouse */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente al pasar el mouse */
+}
+
+/* Responsividad del logo */
+@media screen and (max-width: 768px) {
+    .logo img {
+        max-width: 120px; /* Tamaño más pequeño en pantallas medianas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo img {
+        max-width: 100px; /* Tamaño aún más pequeño en pantallas pequeñas */
+    }
+}

@@ -1,0 +1,192 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merienda', cursive;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: url('../images/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 90px;
+    text-align: center; /* Centra el contenido en la página */
+}
+
+h1 {
+    color: #07fd1b;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    background: rgba(0, 0, 2, 0.788); /* Negro medio transparente */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 20px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+/* Logo */
+.logo_corpo {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 20px 0; /* Espaciado */
+}
+
+.logo_corpo img {
+    width: 200px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)); /* Sombra sutil */
+    max-width: 100%;
+}
+
+/* Formulario */
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 20px auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #0D6EFD;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Enlace de menú principal */
+form a {
+    display: inline-block;
+    color: #FFD700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    margin-left: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form a:hover {
+    background-color: #FFD700;
+    color: #000;
+    transform: scale(1.05);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Datos del postulante */
+h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #b1b1b4;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    background: rgba(8, 8, 0, 0.76); /* Negro medio transparente */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 20px;
+    margin: auto;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    
+}
+
+/* Footer */
+footer {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-icons {
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    color: yellowgreen;
+    margin: 0 10px;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .logo_corpo img {
+        width: 150px;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    form button {
+        padding: 10px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .logo_corpo img {
+        width: 130px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    form button {
+        padding: 8px 14px;
+    }
+}

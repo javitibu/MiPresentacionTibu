@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilosmodificar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Modificacion de Postulantes</title>
+</head>
+
+<body>
+    <h1>Modificar Postulante</h1>
+    
+    <div class="logo_corpo">
+        <a href="../index.html">
+            <img src="../images/modificar.png">   
+        </a>
+    </div>
+    <div id="app">
+        <form @submit.prevent="obtenerProducto">
+            <label for="codigo">Código:</label>
+            <input type="text" v-model="codigo" required><br>
+            <button type="submit">Modificar Datos</button> <a href="index_post.html">Menu Principal</a>
+        </form>
+
+        <div v-if="mostrarDatosProducto">
+            <br>
+            <h2>Datos del Postulante</h2>
+            <form @submit.prevent="guardarCambios">
+                <label for="apellidoModificar">Apellido:</label>
+                <input type="text" id="apellidoModificar" v-model="apellido" required><br>
+
+                <label for="nombreModificar">Nombre:</label>
+                <input type="text" id="nombreModificar" v-model="nombre" required><br>
+
+                <label for="correoModificar">Correo:</label>
+                <input type="text" step="0.01" id="correoModificar" v-model="correo" required><br>
+
+                <label for="telefonoModificar">Telefono:</label>
+                <input type="text" id="telefonoModificar" v-model="telefono" required><br>
+
+                <label for="comentarioModificar">Comentario:</label>
+                <input type="text" id="comentarioModificar" v-model="comentario" required><br>
+                
+                <label for="edadModificar">Edad:</label>
+                <input type="number" id="edadModificar" v-model="edad" required><br>
+
+                <label for="cvModificar">CV:</label>
+                <input type="text" id="cvModificar" v-model="cv" required><br>
+
+                <button type="submit">Guardar Cambios</button>
+                <a href="modificaciones.html">Cancelar</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        //const URL = "http://127.0.0.1:5500/"
+        const URL = "http://127.0.0.1:5500/"
+
+        const app = Vue.createApp({
+            data() {
+                return {
+                    codigo: '',
+                    apellido: '',
+                    nombre: '',
+                    correo: '',
+                    telefono: '',
+                    comentario: '',
+                    edad: '',
+                    cv: '',
+                    mostrarDatosProducto: false,
+                };
+            },
+            methods: {
+                obtenerProducto() {
+                    fetch(URL + 'productos/' + this.codigo)
+                        .then(response => response.json())
+                        .then(data => {
+                            this.apellido = data.apellido;
+                            this.nombre = data.nombre;
+                            this.correo = data.correo;
+                            this.telefono = data.telefono;
+                            this.comentario = data.comentario;
+                            this.edad = data.edad;
+                            this.cv = data.cv;
+                            this.mostrarDatosProducto = true;
+                        })
+                        .catch(error => console.error('Error:', error));
+                },
+                
+                guardarCambios() {
+                    const formData = new FormData();
+                    formData.append('codigo', this.codigo);
+                    formData.append('apellido', this.apellido);
+                    formData.append('nombre', this.nombre);
+                    formData.append('correo', this.correo);
+                    formData.append('telefono', this.telefono);
+                    formData.append('comentario', this.comentario);
+                    formData.append('edad', this.edad);
+                    formData.append('cv', this.cv);
+
+
+                    fetch(URL + 'productos/' + this.codigo, {
+                        method: 'PUT',
+                        body: formData,
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            alert('Postulante actualizado correctamente');
+                            this.limpiarFormulario();
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            alert('Error al actualizar el Postulante');
+                        });
+                },
+                limpiarFormulario() {
+                    this.codigo = '';
+                    this.apellido = '';
+                    this.nombre = '';
+                    this.correo = '';
+                    this.telefono = '';
+                    this.comentario = '';
+                    this.edad = '';
+                    this.cv = '';
+                    this.mostrarDatosProducto = false;
+                }
+            }
+        });
+
+        app.mount('#app');
+    </script>
+
+    <footer>
+        <p>&copy; 2024 @DIS.TIBU Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/javitibu" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/@buron_javier007" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/javier-alejandro-buron-0732141b2" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merienda', cursive;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: url('../images/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 90px;
+    text-align: center; /* Centra el contenido en la página */
+}
+
+h1 {
+    color: #07fd1b;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    background: rgba(0, 0, 2, 0.788); /* Negro medio transparente */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 20px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+/* Logo */
+.logo_corpo {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 20px 0; /* Espaciado */
+}
+
+.logo_corpo img {
+    width: 200px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)); /* Sombra sutil */
+    max-width: 100%;
+}
+
+/* Formulario */
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 20px auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Ordena el contenido en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form .botones {
+    display: flex;
+    flex-direction: column; /* Organiza los botones verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Añade espacio entre los botones */
+    margin-top: 20px; /* Espaciado entre los botones y el formulario */
+}
+
+form button {
+    background-color: #28a745; /* Botón "Agregar Postulante" en verde */
+    color: white;
+    padding: 12px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center; /* Asegura que el texto del botón esté centrado */
+    width: 200px; /* Tamaño fijo para un diseño más consistente */
+}
+
+form button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.menu a {
+    display: inline-block;
+    color: #FFD700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    margin-left: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu a:hover {
+    background-color: #FFD700;
+    color: #000;
+    transform: scale(1.05);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Footer */
+footer {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-icons {
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    color: yellowgreen;
+    margin: 0 10px;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .logo_corpo img {
+        width: 150px;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    form .botones {
+        gap: 15px; /* Ajusta el espacio entre los botones */
+    }
+
+    form button,
+    form a {
+        width: 100%; /* Los botones ocupan todo el ancho disponible */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .logo_corpo img {
+        width: 130px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    form .botones {
+        gap: 30px; /* Menor espacio entre botones en pantallas pequeñas */
+    }
+
+}
+

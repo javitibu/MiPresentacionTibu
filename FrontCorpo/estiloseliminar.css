@@ -1,0 +1,188 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merienda', cursive;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: url('../images/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 90px;
+    text-align: center; /* Centra el contenido en la página */
+}
+
+h1 {
+    color: #07fd1b;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    background: rgba(0, 0, 2, 0.788); /* Negro medio transparente */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 20px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+/* Logo */
+.logo_corpo {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 20px 0; /* Espaciado */
+}
+
+.logo_corpo img {
+    width: 200px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)); /* Sombra sutil */
+    max-width: 100%;
+}
+
+/* Tabla */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #0D6EFD;
+    color: white;
+    font-weight: 600;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+td button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+td button:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+td a {
+    color: #0D6EFD;
+    transition: color 0.3s ease;
+}
+
+td a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Contenedor de botones o enlaces centrados */
+.contenedor-centrado {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contenedor-centrado a {
+    display: inline-block;
+    color: #FFD700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contenedor-centrado a:hover {
+    background-color: #FFD700;
+    color: #000;
+    transform: scale(1.05);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos para el Footer */
+footer {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-icons {
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    color: yellowgreen;
+    margin: 0 10px;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .logo_corpo img {
+        width: 150px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .logo_corpo img {
+        width: 130px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 8px 14px;
+    }
+}
