@@ -138,7 +138,7 @@ footer p {
 }
 
 .logo img {
-    max-width: 150px; /* Tamaño máximo en ancho */
+    max-width: 200px; /* Tamaño máximo en ancho */
     height: auto; /* Mantiene la proporción */
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)); /* Sombra más visible */
     transition: transform 0.3s ease; /* Animación al pasar el mouse */
@@ -151,12 +151,12 @@ footer p {
 /* Responsividad del logo */
 @media screen and (max-width: 768px) {
     .logo img {
-        max-width: 120px; /* Tamaño más pequeño en pantallas medianas */
+        max-width: 150px; /* Tamaño más pequeño en pantallas medianas */
     }
 }
 
 @media screen and (max-width: 480px) {
     .logo img {
-        max-width: 100px; /* Tamaño aún más pequeño en pantallas pequeñas */
+        max-width: 200px; /* Tamaño aún más pequeño en pantallas pequeñas */
     }
 }
