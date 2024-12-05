@@ -53,9 +53,9 @@ header {
 }
 
 .header-text p {
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin: 0;
-    color: #f0f1e9;
+    color: #adadabe5;
 }
 
 /* Navegación */
@@ -136,45 +136,37 @@ main {
 
 .about-me-container {
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.842);
     border-radius: 8px;
-    text-align: center;
     margin: auto;
-    max-width: 800px; /* Mantiebne el contenido centrado y dentro del cuadro */
+    max-width: 800px;
+    text-align: center; /* Centrar el contenido */
+    display: flex;
+    flex-direction: column; /* Organiza elementos en columna */
+    gap: 1.5rem; /* Espaciado entre secciones */
 }
 
 .about-me-text {
-    max-width: 800px;
-    margin: 0 auto;
     font-size: 1.2rem;
     line-height: 1.6;
 }
 
-/* Contenedor del video */
-.video-container {
-    width: 100%;
-    max-width: 560px;
-    height: auto;
-    margin-top: 1.5rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center;     /* Centra el contenido verticalmente */
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
+.video-section {
+    text-align: center; /* Centra el texto y el video */
 }
 
 .video-titulo {
-    font-size: 1.25rem;
-    color: white;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px;
-    border-radius: 5px;
+    font-size: 1.5rem;
+    color: #000; /* Ajusta el color según el diseño */
+    margin-bottom: 1rem;
+}
+
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px; /* Proporción estándar de YouTube */
+    border-radius: 8px;
+    margin: auto;
 }
 
 /* Estilos para la sección de Estudios y Experiencias */
@@ -197,6 +189,15 @@ main {
     text-align: left;
     margin: 0 auto;
     max-width: 600px;
+}
+.experiencias-container h2 {
+    color: #e0fc0c;
+    background-color: #070808;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para el Footer */
